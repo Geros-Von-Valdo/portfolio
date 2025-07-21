@@ -1,6 +1,4 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
 import TechCard from "./components/TechCard.vue";
 </script>
 
@@ -26,6 +24,12 @@ export default {
         document.documentElement.classList.remove("dark");
       }
     },
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+  },
+  mounted() {
+    this.updateTheme(); // Garante que o estado do Vue sincroniza com o DOM
   },
 };
 </script>
@@ -158,7 +162,7 @@ export default {
     >
       <ul class="flex flex-col items-center justify-center h-full space-y-2">
         <li class="group relative flex flex-col items-center">
-          <a href="#" class="block py-2">
+          <a href="#top" @click.prevent="scrollToTop" class="block py-2">
             <svg
               class="w-8 h-8"
               aria-hidden="true"
@@ -253,7 +257,7 @@ export default {
         </li>
       </ul>
     </nav>
-    <div class="ml-34 pl-20 pr-14 mt-22">
+    <div id="#top" class="ml-34 pl-20 pr-14 mt-22">
       <h1 class="text-7xl">Gabriel Kutner Novotni</h1>
       <h2 class="text-4xl mt-1 ml-2">Full Stack Developer</h2>
       <div class="my-6 mt-12 flex space-x-4">
@@ -292,7 +296,7 @@ export default {
       </div>
 
       <div class="mt-32">
-        <h1 class="text-4xl mb-6 text-center">Tecnologias Principais</h1>
+        <h1 class="text-4xl mb-10 text-center">Tecnologias Principais</h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <TechCard
             icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
@@ -329,36 +333,59 @@ export default {
         </div>
       </div>
 
-    <section class="mt-20">
-  <h1 class="text-4xl font-extrabold text-center text-gray-900 dark:text-white mb-12">
-    Histórico Técnico / Profissional
-  </h1>
+      <section class="mt-20 max-w-4xl mx-auto px-4">
+        <h1
+          class="text-4xl font-extrabold text-center mb-10"
+        >
+          Experiência e Formação
+        </h1>
 
-  <div class="flex flex-col gap-10 border-l-2 border-gray-300 dark:border-gray-600 pl-6">
-    <!-- Emprego mais recente -->
-    <div>
-      <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">2023 – Atual</p>
-      <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">
-        Desenvolvedor Full Stack — Estágio na Prefeitura
-      </h3>
-      <p class="text-gray-700 dark:text-gray-300 mt-2 leading-relaxed">
-        Desenvolvimento de sistemas internos com foco em Vue, Laravel e MySQL. Atuação em APIs REST e automação de processos internos.
-      </p>
-    </div>
+        <div
+          class="relative border-l-2 border-gray-300 border-gray-300 pl-10 space-y-14"
+        >
+          <!-- Emprego mais recente -->
+          <div class="relative">
+            <!-- Marcador da timeline -->
+            <span
+              class="absolute -left-5 top-[2px] w-3 h-3 bg-gray-500 dark:bg-gray-400 rounded-full"
+              aria-hidden="true"
+            ></span>
 
-    <!-- Formação acadêmica -->
-    <div>
-      <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">Graduação</p>
-      <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">
-        Engenharia de Software — UEPG
-      </h3>
-      <p class="text-gray-700 dark:text-gray-300 mt-2 leading-relaxed">
-        Graduando em Engenharia de Software.
-      </p>
-    </div>
-  </div>
-</section>
+            <p
+              class="text-xs uppercase tracking-wide mb-1"
+            >
+              2023 – Atual
+            </p>
+            <h3 class="text-2xl font-semibold">
+              Desenvolvedor Full Stack - Prefeitura de Ponta Grossa
+            </h3>
+            <p class=" mt-2 leading-relaxed">
+              Desenvolvimento de sistemas internos com foco em Vue, Laravel e MySQL.
+              Atuação em APIs REST e automação de processos internos.
+            </p>
+          </div>
 
+          <!-- Formação acadêmica -->
+          <div class="relative">
+            <span
+              class="absolute -left-5 top-[2px] w-3 h-3 bg-gray-500 dark:bg-gray-400 rounded-full"
+              aria-hidden="true"
+            ></span>
+
+            <p
+              class="text-xs uppercase tracking-widemb-1"
+            >
+              Graduação
+            </p>
+            <h3 class="text-2xl font-semibold">
+              Engenharia de Software — UEPG
+            </h3>
+            <p class="mt-2 leading-relaxed">
+              Graduando em Engenharia de Software.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <div v-for="i in 10" class="mt-16">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, voluptas unde?
