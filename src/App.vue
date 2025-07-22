@@ -157,106 +157,107 @@ export default {
     </div>
   </header>
   <main class="">
-    <nav
-      class="fixed left-0 top-0 h-screen w-32 p-4 border-r-2 border-gray-200 flex flex-col justify-center items-center"
-    >
-      <ul class="flex flex-col items-center justify-center h-full space-y-2">
-        <li class="group relative flex flex-col items-center">
-          <a href="#top" @click.prevent="scrollToTop" class="block py-2">
-            <svg
-              class="w-8 h-8"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
-                d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"
-              />
-            </svg>
-          </a>
-          <span
-            class="absolute left-12 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-white text-sm rounded-md px-2 py-1"
-            >Home</span
-          >
-        </li>
-        <li class="text-center">•</li>
-        <li class="group relative flex flex-col items-center">
-          <a href="#" class="block py-2">
-            <svg
-              class="w-8 h-8"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
-                d="M15 9h3m-3 3h3m-3 3h3m-6 1c-.306-.613-.933-1-1.618-1H7.618c-.685 0-1.312.387-1.618 1M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
-              />
-            </svg>
-          </a>
-          <span
-            class="absolute left-12 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-white text-sm rounded-md px-2 py-1"
-            >Experiência</span
-          >
-        </li>
-        <li class="text-center">•</li>
-        <li class="group relative flex flex-col items-center">
-          <a href="#" class="block py-2">
-            <svg
-              class="w-8 h-8"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
-                d="M13.5 8H4m0-2v13a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-5.032a1 1 0 0 1-.768-.36l-1.9-2.28a1 1 0 0 0-.768-.36H5a1 1 0 0 0-1 1Z"
-              />
-            </svg>
-          </a>
-          <span
-            class="absolute left-12 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-white text-sm rounded-md px-2 py-1"
-            >Projetos</span
-          >
-        </li>
-        <li class="text-center">•</li>
-        <li class="group relative flex flex-col items-center">
-          <a href="#" class="block py-2">
-            <svg
-              class="w-8 h-8"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="1"
-                d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
-              />
-            </svg>
-          </a>
-          <span
-            class="absolute left-12 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-white text-sm rounded-md px-2 py-1"
-            >Contato</span
-          >
-        </li>
-      </ul>
-    </nav>
+   <nav
+  class="fixed left-0 top-0 h-screen w-32 p-4 border-r-2 border-gray-200 flex flex-col justify-center items-center"
+>
+  <ul class="flex flex-col items-center justify-center h-full space-y-2">
+    <li class="group relative flex flex-col items-center">
+      <a href="#top" @click.prevent="scrollToTop" class="block py-2">
+        <svg
+          class="w-8 h-8 transition-transform duration-200 group-hover:scale-125"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1"
+            d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"
+          />
+        </svg>
+      </a>
+      <span
+        class="absolute left-12 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-white text-sm rounded-md px-2 py-1"
+        >Home</span
+      >
+    </li>
+    <li class="text-center">•</li>
+    <li class="group relative flex flex-col items-center">
+      <a href="#" class="block py-2">
+        <svg
+          class="w-8 h-8 transition-transform duration-200 group-hover:scale-125"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1"
+            d="M15 9h3m-3 3h3m-3 3h3m-6 1c-.306-.613-.933-1-1.618-1H7.618c-.685 0-1.312.387-1.618 1M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+          />
+        </svg>
+      </a>
+      <span
+        class="absolute left-12 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-white text-sm rounded-md px-2 py-1"
+        >Experiência</span
+      >
+    </li>
+    <li class="text-center">•</li>
+    <li class="group relative flex flex-col items-center">
+      <a href="#" class="block py-2">
+        <svg
+          class="w-8 h-8 transition-transform duration-200 group-hover:scale-125"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1"
+            d="M13.5 8H4m0-2v13a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-5.032a1 1 0 0 1-.768-.36l-1.9-2.28a1 1 0 0 0-.768-.36H5a1 1 0 0 0-1 1Z"
+          />
+        </svg>
+      </a>
+      <span
+        class="absolute left-12 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-white text-sm rounded-md px-2 py-1"
+        >Projetos</span
+      >
+    </li>
+    <li class="text-center">•</li>
+    <li class="group relative flex flex-col items-center">
+      <a href="#" class="block py-2">
+        <svg
+          class="w-8 h-8 transition-transform duration-200 group-hover:scale-125"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="1"
+            d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
+          />
+        </svg>
+      </a>
+      <span
+        class="absolute left-12 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-white text-sm rounded-md px-2 py-1"
+        >Contato</span
+      >
+    </li>
+  </ul>
+</nav>
+
     <div id="#top" class="ml-34 pl-20 pr-14 mt-22">
       <h1 class="text-7xl">Gabriel Kutner Novotni</h1>
       <h2 class="text-4xl mt-1 ml-2">Full Stack Developer</h2>
