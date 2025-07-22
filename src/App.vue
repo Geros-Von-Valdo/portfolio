@@ -340,6 +340,12 @@ export default {
         >
           Experiência e Formação
         </h1>
+      <section class="mt-20 max-w-4xl mx-auto px-4">
+        <h1
+          class="text-4xl font-extrabold text-center mb-10"
+        >
+          Experiência e Formação
+        </h1>
 
         <div
           class="relative border-l-2 border-gray-300 border-gray-300 pl-10 space-y-14"
