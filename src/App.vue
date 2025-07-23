@@ -110,7 +110,7 @@ export default {
         </li>
         <li class="text-center">•</li>
         <li class="group relative flex flex-col items-center">
-          <a href="#" class="block py-2">
+          <a href="#exp" class="block py-2">
             <svg class="w-8 h-8 transition-transform duration-200 group-hover:scale-125" aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
@@ -180,24 +180,9 @@ export default {
         </div>
       </div>
 
-      <div class="mt-32">
+      <div id="exp" class="mt-32">
         <h1 class="text-4xl mb-10 text-center">Tecnologias Principais</h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <TechCard icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
-            title="Vue.js" subtitle="Framework FrontEnd" />
-          <TechCard
-            icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-            title="Tailwind CSS" subtitle="Framework de Estilização" />
-          <TechCard icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
-            title="Laravel" subtitle="Framework Backend PHP" />
-          <TechCard icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
-            title="MySQL" subtitle="Banco de Dados Relacional" />
-          <TechCard icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-            title="Python" subtitle="Linguagem Multiuso" bgColor="bg-gray-900" />
-          <TechCard icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-            title="GitHub" subtitle="Ferramenta de Versionamento" bgColor="" />
-          <!-- Insominia , Docker, Notion, Agile-->
-        </div>
+          <TechCard/>
       </div>
 
       <section class="mt-20 max-w-4xl mx-auto px-4">
