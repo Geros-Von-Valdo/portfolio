@@ -8,26 +8,47 @@
 @import './base.css';
 @import "tailwindcss";
 
-
-html {
-  background-color: #ffffff;
-  color: #353535;
-  scroll-behavior: smooth;
-  /*transition: background-color 0.3s, color 0.3s;
-  font-family: "Lato";*/
- 
-}
-
-/* Estilos para o modo escuro */
-html.dark  {
-  background-color: #181818;
-  color: #ffffff;
-}
-
 span, h1, h2, h3 {
   font-family: "Playfair Display", serif;
   font-weight: 400;
 }
+
+/* HTML */
+
+html {
+  background-color: #fff7e5;
+  color: #353535;
+  scroll-behavior: smooth;
+  /*transition: background-color 0.3s, color 0.3s;
+  font-family: "Lato";*/
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+ 
+}
+
+html.dark  {
+  background-color: #181818;
+  color: #ffffffc9;
+}
+
+/* COR SECUNDARIA */
+
+.dark .corSecundaria {
+  background-color: #300303;
+}
+
+/* HIGLIGHT */
+.highlight {
+  color: #300303;
+  border-color: #300303;
+}
+
+
+.dark .highlight {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+
 
 
 /* Estilizando a barra de rolagem */
