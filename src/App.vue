@@ -93,6 +93,7 @@ export default {
       </div>
     </div>
   </header>
+
   <main class="">
     <nav
       class="corSecundaria highlight fixed left-0 top-0 h-screen w-32 p-4 border-r-2 border-gray-200 flex flex-col justify-center items-center">
@@ -147,42 +148,45 @@ export default {
       </ul>
     </nav>
 
-    <div id="#top" class="ml-34 pl-20 pr-14 mt-22">
-      <h1 class="text-7xl">Gabriel Kutner Novotni</h1>
-      <h2 class="text-4xl mt-1 ml-2">Full Stack Developer</h2>
-      <div class="my-6 mt-12 flex space-x-4">
-        <div class="text-xl flex-1 space-y-4">
-          <!-- <p>Estou atualmente cursando o 5° ano de Engenharia de Software na UEPG (Universidade Estadual de Ponta Grossa).</p> -->
-          <p>
-            Sou um desenvolvedor dedicado à transformar ideias em soluções reais. Buscando
-            constantemente evoluir, aprender novas tecnologias e enfrentar desafios com
-            criatividade e dedicação.
-          </p>
-          <p>
-            Tenho experiência sólida no desenvolvimento web, criação de APIs, modelagem de
-            bancos de dados e integração de sistemas. Gosto de aprender, experimentar
-            novas tecnologias e aplicar metodologias ágeis para garantir processos mais
-            organizados e produtivos.
-            <!--e estou sempre aberto a explorar novas ferramentas e metodologias que contribuam para
-            a qualidade e eficiência do que entrego. -->
-          </p>
-          <p>
-            Mais do que escrever código, acredito em desenvolver softwares e prover um
-            serviço que se comunica com os todos os envolvidos.
-          </p>
-        </div>
+    <div class="ml-34 pl-20 pr-14 mt-22">
 
-        <!-- Ajustando a posição da imagem -->
-        <div
-          class="bg-gray-200 w-[450px] h-[450px] rounded-full overflow-hidden flex items-center justify-center shadow-lg border-2"
-          style="margin-top: -100px">
-          <img src="/images/jan_matejko_stac584czyk.webp" alt="Minha Imagem" class="w-full h-full object-cover" />
+      <section id="#top">
+        <h1 class="text-7xl">Gabriel Kutner Novotni</h1>
+        <h2 class="text-4xl mt-1 ml-2">Full Stack Developer</h2>
+        <div class="my-6 mt-12 flex space-x-4">
+          <div class="text-xl flex-1 space-y-4">
+            <!-- <p>Estou atualmente cursando o 5° ano de Engenharia de Software na UEPG (Universidade Estadual de Ponta Grossa).</p> -->
+            <p>
+              Sou um desenvolvedor dedicado à transformar ideias em soluções reais. Buscando
+              constantemente evoluir, aprender novas tecnologias e enfrentar desafios com
+              criatividade e dedicação.
+            </p>
+            <p>
+              Tenho experiência sólida no desenvolvimento web, criação de APIs, modelagem de
+              bancos de dados e integração de sistemas. Gosto de aprender, experimentar
+              novas tecnologias e aplicar metodologias ágeis para garantir processos mais
+              organizados e produtivos.
+              <!--e estou sempre aberto a explorar novas ferramentas e metodologias que contribuam para
+            a qualidade e eficiência do que entrego. -->
+            </p>
+            <p>
+              Mais do que escrever código, acredito em desenvolver softwares e prover um
+              serviço que se comunica com os todos os envolvidos.
+            </p>
+          </div>
+
+          <!-- Ajustando a posição da imagem -->
+          <div
+            class="bg-gray-200 w-[450px] h-[450px] rounded-full overflow-hidden flex items-center justify-center shadow-lg border-2"
+            style="margin-top: -100px">
+            <img src="/images/jan_matejko_stac584czyk.webp" alt="Minha Imagem" class="w-full h-full object-cover" />
+          </div>
         </div>
-      </div>
+      </section>
 
       <div id="exp" class="mt-32">
         <h1 class="text-4xl mb-10 text-center">Tecnologias Principais</h1>
-          <TechCard/>
+        <TechCard />
       </div>
 
       <section class="mt-20 max-w-4xl mx-auto px-4">
