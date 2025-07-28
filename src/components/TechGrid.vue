@@ -1,5 +1,5 @@
 <template>
-  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 select-none mr-10">
+  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 select-none">
     <div
       v-for="tech in techs"
       :key="tech.title"

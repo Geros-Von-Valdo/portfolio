@@ -1,6 +1,6 @@
 <script setup>
 import TechGrid from "./components/TechGrid.vue";
-
+import SideBar from "./components/SideBar.vue";
 </script>
 
 <script>
@@ -37,7 +37,7 @@ export default {
 
 <template>
   <!-- Header fixo no topo -->
-  <header class="fixed top-0 right-0 p-4 flex items-center gap-2 group">
+  <header class="fixed top-0 right-0 pt-3 z-10 flex items-center gap-2 group">
     <div class="relative">
       <!-- Ícone da Engrenagem (sempre visível e rotaciona no hover) -->
       <div
@@ -151,9 +151,11 @@ export default {
     </div>
   </header>
 
-  <main class="">
+  <!-- h-screen snap-y snap-mandatory overflow-y-scroll -->
+  <main class="ml-[10vw] w-[90vw] px-[4vw] overflow-x-hidden">
     <nav
-      class="corSecundaria highlight fixed left-0 top-0 h-screen w-32 p-4 border-r-2 border-gray-200 flex flex-col justify-center items-center"
+      class="corSecundaria highlight fixed left-0 top-0 h-screen p-4 border-r-2 border-gray-200 flex flex-col justify-center items-center"
+      style="width: 10vw"
     >
       <ul class="flex flex-col items-center justify-center h-full space-y-2">
         <li class="group relative flex flex-col items-center">
@@ -253,13 +255,13 @@ export default {
       </ul>
     </nav>
 
-    <div class="ml-34 pl-20 pr-14 mt-22">
-      <section id="#top">
+    <section id="top" class="pr-[4vw] h-screen snap-start flex items-center">
+      <div class="relative">
         <h1 class="text-7xl">Gabriel Kutner Novotni</h1>
         <h2 class="text-4xl mt-1 ml-2">Full Stack Developer</h2>
+
         <div class="my-6 mt-12 flex space-x-4">
           <div class="text-xl flex-1 space-y-4">
-            <!-- <p>Estou atualmente cursando o 5° ano de Engenharia de Software na UEPG (Universidade Estadual de Ponta Grossa).</p> -->
             <p>
               Sou um desenvolvedor dedicado à transformar ideias em soluções reais.
               Buscando constantemente evoluir, aprender novas tecnologias e enfrentar
@@ -270,8 +272,6 @@ export default {
               de bancos de dados e integração de sistemas. Gosto de aprender, experimentar
               novas tecnologias e aplicar metodologias ágeis para garantir processos mais
               organizados e produtivos.
-              <!--e estou sempre aberto a explorar novas ferramentas e metodologias que contribuam para
-            a qualidade e eficiência do que entrego. -->
             </p>
             <p>
               Mais do que escrever código, acredito em desenvolver softwares e prover um
@@ -279,9 +279,9 @@ export default {
             </p>
           </div>
 
-          <!-- Ajustando a posição da imagem -->
+          <!-- Imagem -->
           <div
-            class="bg-gray-200 w-[450px] h-[450px] rounded-full overflow-hidden flex items-center justify-center shadow-lg border-2"
+            class="bg-gray-200 w-[450px] h-[450px] rounded-full overflow-hidden flex items-center justify-center shadow-lg border"
             style="margin-top: -100px"
           >
             <img
@@ -291,74 +291,149 @@ export default {
             />
           </div>
         </div>
-      </section>
-
-      <section id="pro" class="mt-32 relative">
-        <h1 class="text-4xl mb-10 text-center">Sobre Mim</h1>
-      </section>
-
-    <div id="exp" class="mt-32">
-  <h1 class="text-4xl mb-10 text-center">Tecnologias Principais</h1>
-
-  <div class="relative">
-    <div class="absolute top-0 left-0 h-full w-1 highlight bg-current"></div>
-
-    <div class="pl-6">
-      <TechGrid />
-    </div>
-  </div>
-
-
-</div>
-
-      <section class="mt-20 max-w-4xl mx-auto px-4">
-        <h1 class="text-4xl font-extrabold text-center mb-10">Experiência e Formação</h1>
-
-        <div class="relative border-l-2 border-gray-300 border-gray-300 pl-10 space-y-14">
-          <!-- Emprego mais recente -->
-          <div class="relative">
-            <!-- Marcador da timeline -->
-            <span
-              class="absolute -left-5 top-[2px] w-3 h-3 bg-gray-500 dark:bg-gray-400 rounded-full"
-              aria-hidden="true"
-            ></span>
-
-            <p class="text-xs uppercase tracking-wide mb-1">2023 – Atual</p>
-            <h3 class="text-2xl font-semibold">
-              Desenvolvedor Full Stack - Prefeitura de Ponta Grossa
-            </h3>
-            <p class="mt-2 leading-relaxed">
-              Desenvolvimento de sistemas internos com foco em Vue, Laravel e MySQL.
-              Atuação em APIs REST e automação de processos internos.
-            </p>
-          </div>
-
-          <!-- Formação acadêmica -->
-          <div class="relative">
-            <span
-              class="absolute -left-5 top-[2px] w-3 h-3 bg-gray-500 dark:bg-gray-400 rounded-full"
-              aria-hidden="true"
-            ></span>
-
-            <p class="text-xs uppercase tracking-widemb-1">Graduação</p>
-            <h3 class="text-2xl font-semibold">Engenharia de Software — UEPG</h3>
-            <p class="mt-2 leading-relaxed">Graduando em Engenharia de Software.</p>
-          </div>
-        </div>
-      </section>
-      <h1 class="text-4xl font-extrabold text-center mb-10 mt-10">Projetos</h1>
-      <div class="bg-gray-700 h-20"></div>
-      <section></section>
-      <h1 class="text-4xl font-extrabold text-center mb-10 mt-10">Projetos</h1>
-      <div class="bg-gray-700 h-20"></div>
-      <section></section>
-
-      <div v-for="i in 10" class="mt-16">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, voluptas unde?
-        Exercitationem molestias voluptatibus omnis cumque tenetur at! Ut nam magnam
-        ducimus nobis neque obcaecati maiores, ea earum blanditiis non.
       </div>
-    </div>
+    </section>
+
+    <section id="exp" class="h-screen snap-start flex flex-col justify-center px-4">
+      <h1 class="text-4xl mb-10 text-center">Tecnologias Principais</h1>
+      <div class="relative">
+        <div class="">
+          <TechGrid />
+        </div>
+      </div>
+    </section>
+
+    <!-- max-w-4xl mx-auto px-4 h-screen snap-start flex items-center  -->
+    <section class="mt-20">
+      <h1 class="text-4xl font-extrabold text-center mb-10">Experiência e Formação</h1>
+
+      <div class="relative border-l-2 border-gray-300 border-gray-300 pl-10 space-y-14">
+        <!-- Emprego mais recente -->
+        <div class="relative">
+          <!-- Marcador da timeline -->
+          <span
+            class="absolute -left-5 top-[2px] w-3 h-3 bg-gray-500 dark:bg-gray-400 rounded-full"
+            aria-hidden="true"
+          ></span>
+
+          <p class="text-xs uppercase tracking-wide mb-1">2023 – Atual</p>
+          <h3 class="text-2xl font-semibold">
+            Desenvolvedor Full Stack - Prefeitura de Ponta Grossa
+          </h3>
+          <p class="mt-2 leading-relaxed">
+            Desenvolvimento de sistemas internos com foco em Vue, Laravel e MySQL. Atuação
+            em APIs REST e automação de processos internos.
+          </p>
+        </div>
+
+        <!-- Formação acadêmica -->
+        <div class="relative">
+          <span
+            class="absolute -left-5 top-[2px] w-3 h-3 bg-gray-500 dark:bg-gray-400 rounded-full"
+            aria-hidden="true"
+          ></span>
+
+          <p class="text-xs uppercase tracking-widemb-1">Graduação</p>
+          <h3 class="text-2xl font-semibold">Engenharia de Software — UEPG</h3>
+          <p class="mt-2 leading-relaxed">Graduando em Engenharia de Software.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h1 class="text-4xl font-extrabold text-center mb-10 mt-10">Projetos</h1>
+      <div class="bg-gray-700 h-20"></div>
+    </section>
+
+    <section id="contact" class="py-16 px-4">
+     <div class="max-w-3xl mx-auto text-center"> <!-- aumentamos de 2xl para 3xl -->
+    <h2 class="text-3xl font-bold mb-6">Entre em Contato</h2>
+    <p class="mb-10">
+      Mande um email para me contatar ou use as redes sociais abaixo.
+    </p>
+
+    <!-- Formulário -->
+    <form
+      action="https://formspree.io/f/SEU_ID"
+      method="POST"
+      class="shadow-md rounded-lg p-6 space-y-6 highlight border text-left"
+    >
+      <!-- Campo de e-mail -->
+      <div class="flex flex-col space-y-2">
+        <label for="email" class="text-sm font-medium highlight">E-mail</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="exemplo@dominio.com"
+          class="w-full p-3 border highlight bg-transparent rounded focus:outline-none focus:ring-2 focus:ring-[#300303] dark:focus:ring-white text-inherit placeholder-gray-500 dark:placeholder-gray-400"
+        />
+      </div>
+
+      <!-- Campo de mensagem -->
+      <div class="flex flex-col space-y-2">
+        <label for="message" class="text-sm font-medium highlight">Mensagem</label>
+        <textarea
+          name="message"
+          id="message"
+          required
+          placeholder="Escreva sua mensagem aqui..."
+          class="w-full p-3 border highlight bg-transparent rounded h-32 resize-none focus:outline-none focus:ring-2 focus:ring-[#300303] dark:focus:ring-white text-inherit placeholder-gray-500 dark:placeholder-gray-400"
+        ></textarea>
+      </div>
+
+      <!-- Botão sem hover -->
+      <button
+        type="submit"
+        class="w-full py-3 rounded highlight border"
+      >
+        Enviar e-mail
+      </button>
+    </form>
+
+        <!-- Links sociais -->
+        <div class="mt-10 flex justify-center gap-6">
+          <a
+            href="https://wa.me/55SEUNUMERO?text=Oi!%20Vim%20pelo%20seu%20portfólio."
+            target="_blank"
+            class="flex items-center gap-2 text-green-600 hover:text-green-700"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20.52 3.48A11.77 11.77 0 0012 0C5.38 0 0 5.38 0 12a11.9 11.9 0 001.69 6.09L0 24l6.22-1.63A11.91 11.91 0 0012 24c6.62 0 12-5.38 12-12 0-3.19-1.25-6.21-3.48-8.52zM12 21.5a9.46 9.46 0 01-4.85-1.31l-.35-.21-3.69.97.98-3.59-.23-.37a9.48 9.48 0 01-1.49-5.09C2.37 6.49 6.49 2.37 12 2.37c2.52 0 4.9.98 6.68 2.76A9.41 9.41 0 0121.63 12c0 5.51-4.48 9.5-9.63 9.5zm5.04-7.59c-.27-.14-1.6-.79-1.85-.88-.25-.1-.43-.14-.6.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07s-1.15-.42-2.2-1.34c-.82-.73-1.37-1.63-1.53-1.9-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.6-1.44-.82-1.98-.22-.54-.44-.47-.6-.48-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3 0 1.36.98 2.67 1.11 2.85.14.18 1.91 3.03 4.63 4.25.65.28 1.15.45 1.55.58.65.21 1.24.18 1.7.11.52-.08 1.6-.66 1.83-1.29.23-.63.23-1.17.16-1.29-.07-.12-.25-.2-.52-.34z"
+              />
+            </svg>
+            WhatsApp
+          </a>
+
+          <a
+            href="https://github.com/seuusuario"
+            target="_blank"
+            class="flex items-center gap-2 text-gray-800 hover:text-black"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.05-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.76.08-.74.08-.74 1.22.08 1.86 1.26 1.86 1.26 1.08 1.85 2.83 1.32 3.52 1.01.11-.78.42-1.32.76-1.63-2.67-.3-5.47-1.34-5.47-5.97 0-1.32.47-2.39 1.24-3.23-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.23 0 4.64-2.8 5.66-5.48 5.96.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.29 0 .32.22.7.82.58A12.01 12.01 0 0024 12c0-6.63-5.37-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+
+          <a
+            href="https://linkedin.com/in/seuperfil"
+            target="_blank"
+            class="flex items-center gap-2 text-blue-700 hover:text-blue-800"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 5 2.12 5 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.53-.99 1.8-2.2 3.7-2.2 4 0 4.8 2.6 4.8 6v9.8h-4V15c0-2.4-.04-5.5-3.4-5.5-3.4 0-3.9 2.7-3.9 5.3v9.2h-4V8z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
