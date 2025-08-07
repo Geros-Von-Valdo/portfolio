@@ -257,7 +257,7 @@ export default {
 
     <section id="top" class="pr-[4vw] h-screen snap-start flex items-center">
       <div class="relative">
-        <h1 class="text-7xl">Gabriel Kutner Novotni</h1>
+        <h1 class="text-7xl">Gabriel K. Novotni</h1>
         <h2 class="text-4xl mt-1 ml-2">Full Stack Developer</h2>
 
         <div class="my-6 mt-12 flex space-x-4">
@@ -295,7 +295,7 @@ export default {
     </section>
 
     <section id="exp" class="h-screen snap-start flex flex-col justify-center px-4">
-      <h1 class="text-4xl mb-10 text-center">Tecnologias Principais</h1>
+      <h2 class="text-4xl mb-10 text-center">Tecnologias Principais</h2>
       <div class="relative">
         <div class="">
           <TechGrid />
@@ -305,7 +305,7 @@ export default {
 
     <!-- max-w-4xl mx-auto px-4 h-screen snap-start flex items-center  -->
     <section class="mt-20">
-      <h1 class="text-4xl font-extrabold text-center mb-10">Experiência e Formação</h1>
+      <h2 class="text-4xl font-extrabold text-center mb-10">Experiência e Formação</h2>
 
       <div class="relative border-l-2 border-gray-300 border-gray-300 pl-10 space-y-14">
         <!-- Emprego mais recente -->
@@ -340,7 +340,7 @@ export default {
       </div>
     </section>
     <section>
-      <h1 class="text-4xl font-extrabold text-center mb-10 mt-10">Projetos</h1>
+      <h2 class="text-4xl font-extrabold text-center mb-10 mt-10">Projetos</h2>
       <div class="bg-gray-700 h-20"></div>
     </section>
 
@@ -435,6 +435,9 @@ export default {
       </div>
     </section>
   </main>
+
+  <footer>
+  </footer>
 </template>
 
 <style></style>
